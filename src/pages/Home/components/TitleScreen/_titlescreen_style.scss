@@ -1,0 +1,209 @@
+$padding: 1rem;
+$surname-anim-duration: .8s;
+
+$name-anim-delay: $surname-anim-duration - .1s;
+$name-anim-duration: .8s;
+
+$description-delay: $surname-anim-duration + $name-anim-duration;
+
+.titlescreen__container {
+    height: 100svh;
+    // background-color: #242424;
+    background-image: url("../../assets/title_bg.png");
+    background-size: 30em;
+    background-repeat: repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    nav {
+        padding: $padding 2rem;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 1.5rem;
+
+        font-size: clamp(1em, 4vw, 1.3em);
+        font-weight: bold;
+
+        a {
+            color: #3943B7;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .title {
+        font-size: clamp(1.2em, 4vw, 2em);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .fullname {
+            font-family: "Righteous", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: .20rem;
+            color: #0a122a;
+
+
+            #surname {
+                // font-family: monospace;
+                overflow: hidden;
+                /* Ensures the content is not revealed until the animation */
+                border-right: .1em solid black;
+                /* The typwriter cursor */
+                white-space: nowrap;
+                /* Keeps the content on a single line */
+                margin: 0 auto;
+                /* Adjust as needed */
+                animation:
+                    typing $surname-anim-duration steps(9, end) forwards,
+                    blink-caret $surname-anim-duration step-end forwards;
+            }
+
+            #name {
+                width: 0;
+                // font-family: monospace;
+                overflow: hidden;
+                /* Ensures the content is not revealed until the animation */
+                // border-right: .1em solid black;
+                /* The typwriter cursor */
+                white-space: nowrap;
+                /* Keeps the content on a single line */
+                margin: 0 auto;
+                /* Adjust as needed */
+                animation:
+                    typing $name-anim-duration steps(8, end) $name-anim-delay forwards,
+                    blink-caret $name-anim-duration step-end $name-anim-delay forwards;
+            }
+        }
+    }
+
+    .description {
+        color: #406b5a;
+        font-size: .8em !important;
+        // font-family: "descriptionFont";
+        font-family: "Kode Mono", monospace;
+    }
+
+}
+
+.sections-list__container {
+    font-size: clamp(1em, 4vw, 1.3em);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding: $padding 0;
+    
+    .links {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        
+        a {
+            color: #3943B7;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+@keyframes second-typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 57.62px;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    0% {
+        border-right: .1em solid black;
+    }
+
+    99% {
+        border-right: .1em solid black;
+    }
+
+    100% {
+        border-right: transparent;
+    }
+}
+
+@media (min-width: 485px) {
+    .links {
+        width: 50%;
+    }
+}
+
+@keyframes textAppears {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+$anim-duration: .7s;
+
+.first {
+    opacity: 0;
+    text-align: start;
+
+    animation-delay: $description-delay;
+    animation-duration: $anim-duration;
+    animation-name: textAppears;
+    animation-fill-mode: forwards;
+}
+
+
+$second-anim-delay: $description-delay + $anim-duration + 0.2s;
+
+.second {
+    opacity: 0;
+    text-align: start;
+
+    animation-delay: $second-anim-delay;
+    animation-duration: $anim-duration;
+    animation-name: textAppears;
+    animation-fill-mode: forwards;
+}
+
+$third-anim-delay: $second-anim-delay + 0.2s;
+$third-anim-duration: .3s;
+
+.third {
+    opacity: 0;
+    text-align: start;
+
+    animation-delay: $third-anim-delay;
+    animation-duration: $third-anim-duration;
+    animation-name: textAppears;
+    animation-fill-mode: forwards;
+}

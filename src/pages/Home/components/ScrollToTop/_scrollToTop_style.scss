@@ -1,0 +1,53 @@
+$btnMargin: 1rem;
+$rightPos: -46px;
+
+@keyframes btnAppears {
+    from {
+        right: $rightPos;
+    } to {
+        right: 0px;
+    }
+}
+
+@keyframes btnDisappears {
+    from {
+        right: 0px;
+    } to {
+        right: $rightPos;
+        display: none;
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: $btnMargin;
+    right: $rightPos;
+
+    animation-duration: .4s;
+}
+
+.back-to-top__btn {
+    background: #ffa033;
+    
+    padding: .7rem;
+    border: none;
+    cursor: pointer;
+
+    border-radius: 10px 0 0 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s ease-out;
+    animation-fill-mode: forwards;  // maintains the properties of the animation when it ends
+}
+
+.inactive {
+    animation-name: btnDisappears;
+    right: $rightPos;
+}
+.active {
+    animation-name: btnAppears;
+    right: 0px;
+}

@@ -1,0 +1,11 @@
+footer {
+    background-color: black;
+
+    color: white;
+    padding: 5rem 2rem;
+
+    .last-update {
+        text-align: right;
+        font-size: clamp(.7em, 4vw, 1em);
+    }
+}

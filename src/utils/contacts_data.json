@@ -1,0 +1,20 @@
+[
+    {
+        "type": "E-mail",
+        "link": "mailto:federico.serratore04@gmail.com",
+        "value": "federico.serratore04@gmail.com",
+        "img_url": "./images/Contacts_Images/gmail_logo.png"
+    },
+    {
+        "type": "Linkedin",
+        "link": "https://www.linkedin.com/in/federico-serratore",
+        "value": "Serratore Federico",
+        "img_url": "./images/Contacts_Images/linkedin_logo.png"
+    },
+    {
+        "type": "GitHub",
+        "link": "https://github.com/FoFFolo",
+        "value": "FoFFolo",
+        "img_url": "./images/Contacts_Images/github_logo.png"
+    }
+]

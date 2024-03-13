@@ -1,0 +1,54 @@
+[
+    {
+        "title": "HTML5",
+        "image_url": "./images/Knowledges_Logos/HTML5_logo.png"
+    },
+    {
+        "title": "CSS",
+        "image_url": "./images/Knowledges_Logos/CSS_logo.png"
+    },
+    {
+        "title": "JavaScript",
+        "image_url": "./images/Knowledges_Logos/JavaScript_logo.png"
+    },
+    {
+        "title": "React",
+        "image_url": "./images/react.svg"
+    },
+    {
+        "title": "TypeScript",
+        "image_url": "./images/Knowledges_Logos/TypeScript_logo.png"
+    },
+    {
+        "title": "Python",
+        "image_url": "./images/Knowledges_Logos/Python_logo.png"
+    },
+    {
+        "title": "Java",
+        "image_url": "./images/Knowledges_Logos/Java_logo.png"
+    },
+    {
+        "title": "Php",
+        "image_url": "./images/Knowledges_Logos/Php_logo.png"
+    },
+    {
+        "title": "Dart",
+        "image_url": "./images/Knowledges_Logos/Dart_logo.png"
+    },
+    {
+        "title": "Flutter",
+        "image_url": "./images/Knowledges_Logos/Flutter_logo.png"
+    },
+    {
+        "title": "C",
+        "image_url": "./images/Knowledges_Logos/C_logo.png"
+    },
+    {
+        "title": "Julia",
+        "image_url": "./images/Knowledges_Logos/Julia_logo.png"
+    },
+    {
+        "title": "FireBase",
+        "image_url": "./images/Knowledges_Logos/Firebase_logo.png"
+    }
+]
