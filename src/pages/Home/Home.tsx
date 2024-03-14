@@ -2,7 +2,7 @@ import TitleScreen from "./components/TitleScreen/_TitleScreen"
 
 import Section from "../../components/Section/Section"
 import AboutMe from "./components/AboutMe/_AboutMe"
-import Skills from "./components/Skills/_Skills"
+import Abilities from "./components/Abilities/_Ablities"
 import ProjectFetch from "./components/Projects/_ProjectFetch";
 import Contacts from "./components/Contacts/_Contacts";
 import Footer from "./components/Footer/_Footer";
@@ -20,7 +20,7 @@ export default function Home() {
             </Section>
 
             <Section title="Knowledges">
-                <Skills />
+                <Abilities />
             </Section>
 
             <Section title="Projects">

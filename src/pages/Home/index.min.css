@@ -241,7 +241,7 @@
   text-align: start;
 }
 
-.skillcard {
+.abilitycard {
   border-radius: 2px 2px 150px 150px;
   border: 1px solid black;
   background-color: gold;
@@ -254,7 +254,7 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
   transition: all 0.2s ease;
 }
-.skillcard img {
+.abilitycard img {
   width: 9rem;
   height: 9rem;
   object-fit: contain;
@@ -264,18 +264,18 @@
   -o-user-drag: none;
   user-drag: none;
 }
-.skillcard .skillcard__description {
+.abilitycard .abilitycard__description {
   max-width: 9rem;
   text-align: center;
   margin-bottom: 1.2rem;
 }
 
-.skillcard:hover {
+.abilitycard:hover {
   transform: scale(1.1);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.skills__container {
+.abilities__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -285,7 +285,7 @@
 }
 
 @media (max-width: 50rem) {
-  .skills__container {
+  .abilities__container {
     height: 70vh;
     overflow-y: scroll;
   }

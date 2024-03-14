@@ -1,8 +1,6 @@
 $img_size: 9rem;
 
-.skillcard {
-    // width: $skillcard_width;
-    // height: 300px;
+.abilitycard {
     border-radius: 2px 2px 150px 150px;
     border: 1px solid black;
     background-color: gold;
@@ -27,14 +25,14 @@ $img_size: 9rem;
         user-drag: none;
     }
 
-    .skillcard__description {
+    .abilitycard__description {
         max-width: $img_size;
         text-align: center;
         margin-bottom: 1.2rem;
     }
 }
 
-.skillcard:hover {
+.abilitycard:hover {
     transform: scale(1.1);
 
     box-shadow: 0 2px 4px rgba( #000, .8 );

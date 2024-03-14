@@ -1,14 +1,14 @@
-type SkillCardProps = {
+type AbilityCardProps = {
     title: string;
     image_url: string;
 }
 
-export default function SKillCard({title, image_url}: SkillCardProps) {
+export default function AbilityCard({title, image_url}: AbilityCardProps) {
     // TODO: make the card similar to a military honor badge
     return(
-        <div className="skillcard">
+        <div className="abilitycard">
             <img src={image_url} />
-            <div className="skillcard__description">
+            <div className="abilitycard__description">
                 <h3>{title}</h3>
             </div>
         </div>
