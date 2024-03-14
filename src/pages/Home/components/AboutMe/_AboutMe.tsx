@@ -1,30 +1,4 @@
-import { useRef, useEffect } from "react"
-
 export default function AboutMe() {
-    const lifeChartRef = useRef<HTMLDivElement | null>(null);
-    const studentRef = useRef<HTMLDivElement | null>(null);
-    const programmerRef = useRef<HTMLDivElement | null>(null);
-
-    useEffect(() => {
-        if (!lifeChartRef.current) return;
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                console.log(entry);
-                if (entry.isIntersecting) {
-                    if (!studentRef.current?.classList.contains("student-anim")) {
-                        studentRef.current?.classList.add("student-anim");
-                        programmerRef.current?.classList.add("programmer-anim");
-                    }
-                }
-            })
-        })
-
-        observer.observe(lifeChartRef.current);
-
-        () => {if (lifeChartRef.current) observer.unobserve(lifeChartRef.current);}
-    }, []);
-
     return (
         <div className="aboutme__container">
             <div className="student__section">
@@ -45,9 +19,9 @@ export default function AboutMe() {
                 </ul>
             </div>
 
-            <div ref={lifeChartRef} className="life__chart">
-                <div ref={studentRef} className="student__half"></div>
-                <div ref={programmerRef} className="programmer__half"></div>
+            <div className="life__chart">
+                <div className="student__half"></div>
+                <div className="programmer__half"></div>
             </div>
 
             <div className="programmer__section">

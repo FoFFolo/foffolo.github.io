@@ -37,7 +37,7 @@ $description-delay: $surname-anim-duration + $name-anim-duration;
     }
 
     .title {
-        font-size: clamp(1.2em, 4vw, 2em);
+        font-size: clamp(1.2em, 4vw, 1.7em);
 
         display: flex;
         flex-direction: column;

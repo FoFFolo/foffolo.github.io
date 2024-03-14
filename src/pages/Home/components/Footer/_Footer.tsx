@@ -10,7 +10,7 @@ export default function Footer() {
     }
 
     useEffect(() => {
-        fetch(`https://api.github.com/repos/FoFFolo/TimerApp_Flutter`)
+        fetch(`https://api.github.com/repos/FoFFolo/foffolo.github.io`)
             .then((response) => response.json())
             .then((data) => {
                 const last_update = format_pushed_at_date(data.pushed_at.split("T")[0]);

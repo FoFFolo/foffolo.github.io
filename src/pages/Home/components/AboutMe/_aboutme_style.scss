@@ -24,24 +24,6 @@
     position: relative;
 }
 
-@keyframes StudentAnim {
-    0% {
-        transform: translateX(-40px);
-    }
-
-    40% {
-        transform: translateX(2.5px);
-    }
-
-    50% {
-        transform: translateX(-15px);
-    }
-
-    100% {
-        transform: translateX(0px);
-    }
-}
-
 .student__half {
     flex: 1;
 
@@ -58,35 +40,11 @@
     align-items: center;
 }
 
-.student-anim {
-    // transform: translateX(2.5px);
-    animation-duration: .7s;
-    animation-timing-function: ease-in-out;
-    animation-name: StudentAnim;
-}
 
 .student__half::before {
     content: "Student";
     font-size: clamp(0.7em, 4vw, 1em);
     margin-bottom: 4%;
-}
-
-@keyframes ProgrammerAnim {
-    0% {
-        transform: translateX(40px);
-    }
-
-    40% {
-        transform: translateX(-2.5px);
-    }
-
-    50% {
-        transform: translateX(15px);
-    }
-
-    100% {
-        transform: translateX(0px);
-    }
 }
 
 .programmer__half {
@@ -99,16 +57,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    transition: all .4s ease;
 }
 
-.programmer-anim {
-    // transform: translateX(-2.5px);
-    animation-duration: .7s;
-    animation-timing-function: ease-in-out;
-    animation-name: ProgrammerAnim;
-}
 
 .programmer__half::before {
     content: "Programmer";
