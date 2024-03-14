@@ -15,7 +15,7 @@ export default function ProjectFetch() {
             .then((data) => {
                 let personal_repo: Record<string, any>[] = []
                 data.map((repo: Record<string, any>) => {
-                    if (!repo.fork && repo.full_name !== "FoFFolo/serratorefederico.github.io") {
+                    if (!repo.fork && repo.full_name !== "FoFFolo/foffolo.github.io") {
                         personal_repo.push(repo);
 
                         return fetch(`https://raw.githubusercontent.com/FoFFolo/${repo.name}/master/.gitignore`)
