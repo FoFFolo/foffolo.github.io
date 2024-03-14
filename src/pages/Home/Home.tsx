@@ -19,7 +19,7 @@ export default function Home() {
                 <AboutMe />
             </Section>
 
-            <Section title="Knowledges">
+            <Section title="Abilities">
                 <Abilities />
             </Section>
 

@@ -24,7 +24,7 @@ export default function TitleScreen() {
             <div className="sections-list__container">
                 <div className="links">
                     <a href="#Aboutme">About Me</a>
-                    <a href="#Knowledges">Knowledges</a>
+                    <a href="#Abilities">Abilities</a>
                     <a href="#Projects">Projects</a>
                 </div>
             </div>
