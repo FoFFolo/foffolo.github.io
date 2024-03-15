@@ -1,6 +1,6 @@
 export default function TitleScreen() {
     return (
-        <div className="titlescreen__container">
+        <div className="h-svh text-center">
             <nav>
                 <a href="https://github.com/FoFFolo">GitHub</a>
                 <a href="#Contacts">Contacts</a>
