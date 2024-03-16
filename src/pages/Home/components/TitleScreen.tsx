@@ -16,13 +16,13 @@ export default function TitleScreen() {
         <div className="h-svh bg-titlescreen-bg bg-[length:30em] bg-repeat
                         flex flex-col justify-between">
             <nav className="py-4 px-8 flex flex-row justify-end gap-6
-                            font-bold [font-size:_clamp(1em,4vw,1.3em)]">
+                            font-bold text-ts_nav_clamp">
                 <NavLink href="https://github.com/FoFFolo">GitHub</NavLink>
                 <NavLink href="#Contacts">Contacts</NavLink>
             </nav>
 
             <div className="flex flex-col justify-center items-center text-center">
-                <div className="[font-size:_clamp(2em,7vw,3.5em)] font-righteous 
+                <div className="text-fn_clamp font-righteous 
                                 tracking-[.20rem] not-italic text-blue-950">
                     <h1 className="border-r-[.1em] overflow-hidden whitespace-nowrap my-0 mx-auto animate-surname_anim">Serratore</h1>
                     <h1 className="w-0 overflow-hidden whitespace-nowrap my-0 mx-auto animate-name_anim">Federico</h1>
@@ -37,7 +37,7 @@ export default function TitleScreen() {
                 </div>
             </div>
 
-            <div className="[font-size:_clamp(1em,4vw,1.3em)] font-bold
+            <div className="text-dsc_clamp font-bold
                             flex justify-center py-4">
                 <div className="w-full flex justify-evenly">
                     <NavLink href="#Aboutme">About Me</NavLink>
