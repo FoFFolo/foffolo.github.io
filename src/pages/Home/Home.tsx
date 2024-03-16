@@ -1,7 +1,7 @@
 import TitleScreen from "./components/TitleScreen"
 import Section from "../../components/Section"
 import AboutMe from "./components/AboutMe"
-// import Abilities from "./components/Abilities/_Ablities"
+import Abilities from "./components/Ablities"
 // import ProjectFetch from "./components/Projects/_ProjectFetch";
 // import Contacts from "./components/Contacts/_Contacts";
 // import Footer from "./components/Footer/_Footer";
@@ -18,9 +18,9 @@ export default function Home() {
                 <AboutMe />
             </Section>
 
-            {/* <Section title="Abilities">
+            <Section title="Abilities">
                 <Abilities />
-            </Section> */}
+            </Section>
 
             {/* <Section title="Projects">
                 <ProjectFetch />

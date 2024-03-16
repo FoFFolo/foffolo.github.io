@@ -19,7 +19,8 @@ export default {
       colors: {
         // primary: '#202225',
         developer: "#F7DD72",
-        programmer: "#00F0B5"
+        programmer: "#00F0B5",
+        'ability-card': "gold"
       },
       backgroundImage: {
         'titlescreen-bg': "url('../assets/title_bg.png')",
@@ -28,6 +29,10 @@ export default {
         ts_nav_clamp: "clamp(1em, 4vw, 1.3em)",
         fn_clamp: "clamp(2em, 7vw, 3.5em)",
         dsc_clamp: "clamp(1em, 4vw, 1.3em)",
+      },
+      boxShadow: {
+        'inset-abilities': 'inset 0 0 10px #424242',
+        'abilitycard': '0 5px 10px #000c',
       },
       keyframes: {
         typing: {
