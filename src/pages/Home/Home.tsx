@@ -4,7 +4,7 @@ import AboutMe from "./components/AboutMe"
 import Abilities from "./components/Ablities"
 import ProjectFetch from "./components/Projects/ProjectFetch";
 import Contacts from "./components/Contacts";
-// import Footer from "./components/Footer/_Footer";
+import Footer from "./components/Footer";
 // import ScrollToTop from "./components/ScrollToTop/_ScrollToTop";
 
 // import "./index.min.css"
@@ -30,7 +30,7 @@ export default function Home() {
                 <Contacts />
             </Section>
 
-            {/* <Footer /> */}
+            <Footer />
 
             {/* <ScrollToTop /> */}
         </>
