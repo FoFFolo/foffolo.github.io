@@ -2,8 +2,8 @@ import TitleScreen from "./components/TitleScreen"
 import Section from "../../components/Section"
 import AboutMe from "./components/AboutMe"
 import Abilities from "./components/Ablities"
-// import ProjectFetch from "./components/Projects/_ProjectFetch";
-// import Contacts from "./components/Contacts/_Contacts";
+import ProjectFetch from "./components/Projects/ProjectFetch";
+import Contacts from "./components/Contacts";
 // import Footer from "./components/Footer/_Footer";
 // import ScrollToTop from "./components/ScrollToTop/_ScrollToTop";
 
@@ -22,13 +22,13 @@ export default function Home() {
                 <Abilities />
             </Section>
 
-            {/* <Section title="Projects">
+            <Section title="Projects">
                 <ProjectFetch />
-            </Section> */}
+            </Section>
 
-            {/* <Section title="Contacts">
+            <Section title="Contacts">
                 <Contacts />
-            </Section> */}
+            </Section>
 
             {/* <Footer /> */}
 

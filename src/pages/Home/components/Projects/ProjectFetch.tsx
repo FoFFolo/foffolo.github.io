@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import Projects from "./_Projects";
+import Projects from "./Projects";
 
 export default function ProjectFetch() {
     const [githubData, setGithubData] = useState<Record<string, any>>([]);

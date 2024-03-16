@@ -5,10 +5,8 @@
 @layer components {
 
   .abilitycard {
-    @apply relative rounded-tl-sm rounded-tr-sm rounded-br-full rounded-bl-full bg-ability-card
-           p-4 flex flex-col items-center gap-4
-           border border-solid border-black shadow-abilitycard
-           hover:scale-110 transition-transform ease-in-out duration-150;;
+    @apply relative rounded-tl-sm rounded-tr-sm rounded-br-full rounded-bl-full bg-ability-card p-4 flex flex-col items-center gap-4 border border-solid border-black shadow-abilitycard hover:scale-110 transition-transform ease-in-out duration-150;
+    ;
   }
 
 }
@@ -37,4 +35,12 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }
