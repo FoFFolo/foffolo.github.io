@@ -46,6 +46,14 @@ export default {
         textAppears: {
           'from': { opacity: '0' },
           'to': { opacity: '1' }
+        },
+        btnAppears: {
+          'from': { right: '-3rem' },
+          'to': { right: '0px' }
+        },
+        btnDisappears: {
+          'from': { right: '0' },
+          'to': { right: '-3rem' }
         }
       },
       animation: {
@@ -58,6 +66,8 @@ export default {
         first_anim: `textAppears ${firstAnimDuration}s ${descriptionDelay}s forwards`,
         second_anim: `textAppears ${firstAnimDuration}s ${secondAnimDelay}s forwards`,
         third_anim: `textAppears ${thirdAnimDuration}s ${thirdAnimDelay}s forwards`,
+        btn_appears: 'btnAppears .4s forwards',
+        btn_disappears: 'btnDisappears .4s forwards',
       },
     },
     fontFamily: {

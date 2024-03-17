@@ -44,3 +44,18 @@ img {
   -o-user-drag: none;
   user-drag: none;
 }
+
+.scroll {
+  animation-duration: .4s;
+}
+
+.inactive {
+  /* animation-name: btnAppears;
+  animation-direction: reverse;
+  right: -46px; */
+}
+.active {
+  animation-name: btnAppears;
+  right: 0px;
+  /* animation: btnAppears .4s forwards; */
+}

@@ -5,7 +5,7 @@ import Abilities from "./components/Ablities"
 import ProjectFetch from "./components/Projects/ProjectFetch";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
-// import ScrollToTop from "./components/ScrollToTop/_ScrollToTop";
+import ScrollToTop from "./components/ScrollToTop";
 
 // import "./index.min.css"
 
@@ -32,7 +32,7 @@ export default function Home() {
 
             <Footer />
 
-            {/* <ScrollToTop /> */}
+            <ScrollToTop />
         </>
     )
 }
