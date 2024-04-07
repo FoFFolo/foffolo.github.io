@@ -24,7 +24,7 @@ export default function Contacts() {
     }
 
     return (
-        <div className="flex justify-center items-center md:text-lg">
+        <div className="flex justify-center items-center text-sm font-bold sm:text-lg">
             <ul className="grid gap-8">
                 {contactValuesData.map((contact: ContactProps, id: number) => {
                     return <Contact key={id}

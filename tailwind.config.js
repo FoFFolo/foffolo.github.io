@@ -20,7 +20,15 @@ export default {
         // primary: '#202225',
         developer: "#F7DD72",
         programmer: "#00F0B5",
-        'ability-card': "gold"
+        'ability-card': "gold",
+        projectcard: "#DDFFD9"
+        // projectcard: "#FE5F55"
+      },
+      width: {
+        '100vh-mx3-m2': "calc(100vw - (theme('spacing.3')*2) - 16px)",
+        '100vh-mx5-m2': "calc(100vw - (theme('spacing.5')*2) - 16px)",
+        '100vh-mx7-m2': "calc(100vw - (theme('spacing.7')*2) - 16px)",
+        '100vh-mx8-m2': "calc(100vw - (theme('spacing.8')*2) - 16px)",
       },
       backgroundImage: {
         'titlescreen-bg': "url('../assets/title_bg.png')",
@@ -32,7 +40,8 @@ export default {
       },
       boxShadow: {
         'inset-abilities': 'inset 0 0 10px #424242',
-        'abilitycard': '0 5px 10px #000c',
+        abilitycard_sh: '0 5px 10px #000c',
+        projectcard_sh: '#0006 0 2px 4px, #0000004d 0 7px 13px -3px, #0003 0 -3px inset'
       },
       keyframes: {
         typing: {
@@ -69,6 +78,9 @@ export default {
         btn_appears: 'btnAppears .4s forwards',
         btn_disappears: 'btnDisappears .4s forwards',
       },
+      transition: {
+        'carousel-anim': 'all 0.3s ease',
+      }
     },
     fontFamily: {
       righteous: ['Righteous', 'sans-serif'],
