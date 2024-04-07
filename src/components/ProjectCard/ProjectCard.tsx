@@ -18,11 +18,12 @@ export default function ProjectCard({title, description, link, image_url, cardWi
                         <span>{description}</span>
                     </div>
                 </div>
-                <a className="self-center text-black text-center bg-yellow-300
-                             py-1 px-3 rounded-md select-none w-20
+                <a className="self-center text-black text-center
+                             py-2 px-7 rounded-md select-none text-xl
                              border border-solid border-transparent
                              transition-colors ease duration-300
-                             hover:bg-yellow-400" href={link}>Visit</a>
+                             bg-yellow-300 hover:bg-yellow-400" 
+                    href={link}>Visit</a>
             </div>
         </div>
     )
