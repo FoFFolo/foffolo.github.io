@@ -30,7 +30,7 @@ export default function Projects({ githubData, projectImagesUrl }: ProjectProps)
     }
 
     function setDOM_properties() {
-        if (!projectCarouselRef.current) return;
+        if (!projectCarouselRef.current || githubData.length === 1) return;
 
         let cardDimension: number | undefined = undefined;
         console.log("window width: ", window.innerWidth);
@@ -131,6 +131,7 @@ export default function Projects({ githubData, projectImagesUrl }: ProjectProps)
     }
 
     const infinite_carousel = useMemo((): JSX.Element[] => {
+        if (githubData.length === 1) return [];
         if (numCardsOnScreen.current === 1) {
             // one projectCard
             return [
@@ -267,11 +268,9 @@ export default function Projects({ githubData, projectImagesUrl }: ProjectProps)
         <div className="group relative w-full py-8">
             {
                 githubData.length === 1 || (githubData.length === 2 && numCardsOnScreen.current === 2) ?
-                    <>
                         <div ref={projectCarouselRef} className={`m-auto ${githubData.length === 2 ? 'max-w-3xl flex gap-5' : 'max-w-md'}`}>
                             {projectCards}
                         </div>
-                    </>
                     :
                     <>
                         <div className="flex max-w-7xl items-center justify-center m-auto">
