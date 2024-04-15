@@ -2,13 +2,13 @@ import { useEffect, useMemo, useRef, useState } from "react"
 import ProjectCard from "../../../../components/ProjectCard/ProjectCard";
 import chevron_left from '../../../../assets/chevron-left.svg';
 import chevron_right from '../../../../assets/chevron-right.svg';
+import projectCard_images from '../../../../utils/projectCard_images.json';
 
 type ProjectProps = {
     githubData: Record<string, any>;
-    projectImagesUrl: Record<string, string>;
 }
 
-export default function Projects({ githubData, projectImagesUrl }: ProjectProps) {
+export default function Projects({ githubData }: ProjectProps) {
     const projectCarouselRef = useRef<HTMLDivElement | null>(null)
     const carouselRef = useRef<HTMLUListElement | null>(null);
     const isDragging = useRef(false);
@@ -115,7 +115,6 @@ export default function Projects({ githubData, projectImagesUrl }: ProjectProps)
             title={repo.name}
             description={repo.description}
             link={repo.html_url}
-            image_url={projectImagesUrl[repo.name]}
             cardWidth={cardWidth}
         />
     });
@@ -125,7 +124,6 @@ export default function Projects({ githubData, projectImagesUrl }: ProjectProps)
             title={githubData[pos].name}
             description={githubData[pos].description}
             link={githubData[pos].html_url}
-            image_url=""
             cardWidth={cardWidth}
         />
     }

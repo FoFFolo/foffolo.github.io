@@ -2,14 +2,13 @@ type ProjectCardProps = {
     title: string;
     description: string;
     link: string;
-    image_url: string;
     cardWidth: number | undefined;
 }
 
-export default function ProjectCard({title, description, link, image_url, cardWidth} : ProjectCardProps) {
+export default function ProjectCard({title, description, link, cardWidth} : ProjectCardProps) {
     return (
         <div className={`projectcard`} style={{ width: !cardWidth ? 'auto' : `${cardWidth}px` }}>
-            <img src={image_url} className="h-32 bg-emerald-500 object-contain object-center select-none
+            <img src={`./images/ProjectCard_Images/${title}.png`} className="h-32 object-contain object-center select-none
                                     justify-self-center" />
             <div className="h-56 flex flex-col justify-between text-center">
                 <div className="projectcard__description">
