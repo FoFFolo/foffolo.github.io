@@ -10,7 +10,7 @@ export default function ProjectCard({ title, description, link, cardWidth }: Pro
         <div className={`projectcard`} style={{ width: !cardWidth ? 'auto' : `${cardWidth}px` }}>
             <img src={`./images/ProjectCard_Images/${title}.png`} onError={({ currentTarget }) => {
                 currentTarget.onerror = null; // prevents looping
-                currentTarget.src = "./images/ProjectCard_Images/default.png";
+                currentTarget.src = "./images/Contacts_Images/github_logo.png";
             }} className="h-32 object-contain object-center select-none
                             justify-self-center" />
             <div className="h-56 flex flex-col justify-between text-center">
