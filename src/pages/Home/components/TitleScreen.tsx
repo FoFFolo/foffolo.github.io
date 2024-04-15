@@ -2,13 +2,13 @@ export default function TitleScreen() {
 
     const NavLink = ({href, children}: {href: string, children: string}) => {
         return (
-            <a className="text-blue-800 hover:underline"
+                <a className="text-description hover:underline"
              href={href}>{children}</a>
         )
     }
     const DescriptionSpan = ({children, animation}: {children: string, animation: string}) => {
         return (
-            <span  className={`opacity-0 text-start ${animation}`}>{children}</span>
+            <span  className={`opacity-0 text-start ${animation} font-semibold`}>{children}</span>
         )
     }
 

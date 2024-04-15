@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react"
-import ProjectCard from "../../../../components/ProjectCard/ProjectCard";
+import ProjectCard from "../../../../components/ProjectCard";
 import chevron_left from '../../../../assets/chevron-left.svg';
 import chevron_right from '../../../../assets/chevron-right.svg';
 

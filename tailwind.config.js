@@ -21,7 +21,8 @@ export default {
         developer: "#F7DD72",
         programmer: "#00F0B5",
         'ability-card': "gold",
-        projectcard: "#DDFFD9"
+        projectcard: "#DDFFD9",
+        description: "#8338EC"
         // projectcard: "#FE5F55"
       },
       width: {
