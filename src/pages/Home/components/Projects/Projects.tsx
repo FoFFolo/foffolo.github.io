@@ -2,7 +2,6 @@ import { useEffect, useMemo, useRef, useState } from "react"
 import ProjectCard from "../../../../components/ProjectCard/ProjectCard";
 import chevron_left from '../../../../assets/chevron-left.svg';
 import chevron_right from '../../../../assets/chevron-right.svg';
-import projectCard_images from '../../../../utils/projectCard_images.json';
 
 type ProjectProps = {
     githubData: Record<string, any>;

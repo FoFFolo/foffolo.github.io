@@ -5,11 +5,14 @@ type ProjectCardProps = {
     cardWidth: number | undefined;
 }
 
-export default function ProjectCard({title, description, link, cardWidth} : ProjectCardProps) {
+export default function ProjectCard({ title, description, link, cardWidth }: ProjectCardProps) {
     return (
         <div className={`projectcard`} style={{ width: !cardWidth ? 'auto' : `${cardWidth}px` }}>
-            <img src={`./images/ProjectCard_Images/${title}.png`} className="h-32 object-contain object-center select-none
-                                    justify-self-center" />
+            <img src={`./images/ProjectCard_Images/${title}.png`} onError={({ currentTarget }) => {
+                currentTarget.onerror = null; // prevents looping
+                currentTarget.src = "./images/ProjectCard_Images/default.png";
+            }} className="h-32 object-contain object-center select-none
+                            justify-self-center" />
             <div className="h-56 flex flex-col justify-between text-center">
                 <div className="projectcard__description">
                     <h3 className='text-xl font-bold mb-2'>{title}</h3>
@@ -21,7 +24,7 @@ export default function ProjectCard({title, description, link, cardWidth} : Proj
                              py-2 px-7 rounded-md select-none text-xl
                              border border-solid border-transparent
                              transition-colors ease duration-300
-                             bg-yellow-300 hover:bg-yellow-400" 
+                             bg-yellow-300 hover:bg-yellow-400"
                     href={link}>Visit</a>
             </div>
         </div>
