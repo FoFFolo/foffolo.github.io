@@ -38,7 +38,7 @@ export default function AboutMe() {
                                 rounded-e-full">Programmer</div>
             </div>
 
-            <div className="text-lg lg:text-end">
+            <div className="text-lg text-end">
                 <Title>Programmer</Title>
                 <p>
                     I do programming since years, I graduated in a Computer Science high school.
@@ -47,8 +47,8 @@ export default function AboutMe() {
                     GitHub.<br />
                     I'm mostly interested in:
                 </p>
-                <div className="lg:w-52 lg:float-right">
-                    <ul className="list-inside list-disc ml-4 lg:text-start">
+                <div className="w-52 float-right">
+                    <ul className="list-inside list-disc ml-4 text-start">
                         <li>Artificial Intelligence</li>
                         <li>Machine Learning</li>
                         <li>Web development</li>
