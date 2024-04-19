@@ -22,7 +22,8 @@ export default {
         programmer: "#00F0B5",
         'ability-card': "gold",
         projectcard: "#DDFFD9",
-        description: "#8338EC"
+        description: "#8338EC",
+        backToTop: "#FE938C"
         // projectcard: "#FE5F55"
       },
       width: {
@@ -58,12 +59,12 @@ export default {
           'to': { opacity: '1' }
         },
         btnAppears: {
-          'from': { right: '-3rem' },
-          'to': { right: '0px' }
+          'from': { bottom: '-4rem' },
+          'to': { bottom: '10px' }
         },
         btnDisappears: {
-          'from': { right: '0' },
-          'to': { right: '-3rem' }
+          'from': { bottom: '10px' },
+          'to': { bottom: '-4rem' }
         }
       },
       animation: {
