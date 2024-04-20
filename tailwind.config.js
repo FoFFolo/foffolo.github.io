@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 const surnameAnimDuration = .8;
-const nameAnimDelay = surnameAnimDuration - .1;
 const nameAnimDuration = .8;
 const descriptionDelay = surnameAnimDuration + nameAnimDuration
 
@@ -17,14 +16,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        // primary: '#202225',
         developer: "#F7DD72",
         programmer: "#00F0B5",
         'ability-card': "gold",
         projectcard: "#DDFFD9",
         description: "#8338EC",
         backToTop: "#FE938C"
-        // projectcard: "#FE5F55"
       },
       width: {
         '100vh-mx3-m2': "calc(100vw - (theme('spacing.3')*2) - 16px)",
