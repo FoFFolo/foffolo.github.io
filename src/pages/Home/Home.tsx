@@ -1,35 +1,40 @@
-import TitleScreen from "./components/TitleScreen/_TitleScreen"
-
-import Section from "../../components/Section/Section"
-import AboutMe from "./components/AboutMe/_AboutMe"
-import Abilities from "./components/Abilities/_Ablities"
-import ProjectFetch from "./components/Projects/_ProjectFetch";
-import Contacts from "./components/Contacts/_Contacts";
-import Footer from "./components/Footer/_Footer";
-import ScrollToTop from "./components/ScrollToTop/_ScrollToTop";
-
-import "./index.min.css"
+import TitleScreen from "./components/TitleScreen"
+import Section from "../../components/Section"
+import AboutMe from "./components/AboutMe"
+import Abilities from "./components/Ablities"
+import ProjectFetch from "./components/Projects/ProjectFetch";
+import Contacts from "./components/Contacts";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+// import { useEffect } from "react";
 
 export default function Home() {
+    // useEffect(() => {
+    //     console.log(window.scrollY)
+    // }, []);
+
     return (
         <>
             <TitleScreen />
             
-            <Section title="About me">
-                <AboutMe />
-            </Section>
+            <div className="mx-3 sm:mx-5 md:mx-7 lg:mx-8">
+            {/* <div className="[margin-inline:_clamp(.8em,4vw,2em)]"> */}
+                <Section title="About me">
+                    <AboutMe />
+                </Section>
 
-            <Section title="Abilities">
-                <Abilities />
-            </Section>
+                <Section title="Abilities">
+                    <Abilities />
+                </Section>
 
-            <Section title="Projects">
-                <ProjectFetch />
-            </Section>
+                <Section title="Projects">
+                    <ProjectFetch />
+                </Section>
 
-            <Section title="Contacts">
-                <Contacts />
-            </Section>
+                <Section title="Contacts">
+                    <Contacts />
+                </Section>
+            </div>
 
             <Footer />
 

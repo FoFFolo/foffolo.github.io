@@ -19,8 +19,8 @@ export default function Footer() {
     }, [])
 
     return (
-        <footer>
-            <div className="last-update">
+        <footer className="bg-black text-white py-20 px-2 sm:px-8">
+            <div className="text-right text-base sm:text-xl">
                 <h3>Last updated in: {lastUpdate}</h3>
             </div>
         </footer>
