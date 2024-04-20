@@ -8,25 +8,26 @@ export default function ScrollToTop() {
 
     const showBtn = () => {
         if (!btnContainerRef.current || !btnRef.current) return;
+        
+        let windowY = document.documentElement.scrollTop;
 
-        if (window.scrollY > 750) {
-            // console.log("winScr: " + window.scrollY);
-            // console.log("prevScr: " + prevScrolly);
-            if (window.scrollY > prevScrolly) {
-                prevScrolly = window.scrollY;
-                btnContainerRef.current.classList.replace("animate-btn_appears", "animate-btn_disappears");
-            } else {
+        if (windowY < 750) {
+            prevScrolly = window.scrollY;
+            btnContainerRef.current.classList.replace("animate-btn_appears", "animate-btn_disappears");
+        } else {
+            if (windowY < prevScrolly) {
+                // Scrolling UP
                 if (btnContainerRef.current.classList.contains("animate-btn_disappears")) {
                     btnContainerRef.current.classList.replace("animate-btn_disappears", "animate-btn_appears");
                 } else {
                     btnContainerRef.current.classList.add("animate-btn_appears");
                 }
-                prevScrolly = window.scrollY + 10;
+            } else {
+                // Scrolling DOWN
+                btnContainerRef.current.classList.replace("animate-btn_appears", "animate-btn_disappears");
             }
-        } else {
-            prevScrolly = window.scrollY;
-            btnContainerRef.current.classList.replace("animate-btn_appears", "animate-btn_disappears");
         }
+        prevScrolly = windowY;
     }
 
     useEffect(() => {
@@ -39,7 +40,8 @@ export default function ScrollToTop() {
         <div ref={btnContainerRef} id="scroll" className="fixed -bottom-16 right-2">
             <button ref={btnRef} className="bg-backToTop py-3 px-4 rounded-full
                                             flex items-center justify-center
-                                            transition ease-out duration-200"
+                                            transition ease-out duration-200
+                                            shadow-lg"
                 onClick={() => window.scrollTo(0, 0)}>
                 <img src={arrowUp} />
             </button>

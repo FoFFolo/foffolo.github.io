@@ -77,8 +77,8 @@ export default {
         first_anim: `textAppears ${firstAnimDuration}s ${descriptionDelay}s forwards`,
         second_anim: `textAppears ${firstAnimDuration}s ${secondAnimDelay}s forwards`,
         third_anim: `textAppears ${thirdAnimDuration}s ${thirdAnimDelay}s forwards`,
-        btn_appears: 'btnAppears .4s forwards',
-        btn_disappears: 'btnDisappears .4s forwards',
+        btn_appears: 'btnAppears .2s forwards',
+        btn_disappears: 'btnDisappears .2s forwards',
       },
       transition: {
         'carousel-anim': 'all 0.3s ease',
