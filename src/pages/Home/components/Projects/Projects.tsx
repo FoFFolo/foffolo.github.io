@@ -32,7 +32,6 @@ export default function Projects({ githubData }: ProjectProps) {
         if (!projectCarouselRef.current || githubData.length === 1) return;
 
         let cardDimension: number | undefined = undefined;
-        console.log("window width: ", window.innerWidth);
         if (window.innerWidth < 768) {
             // one projectCard
             numCardsOnScreen.current = 1;
