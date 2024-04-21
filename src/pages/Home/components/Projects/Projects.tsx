@@ -53,7 +53,6 @@ export default function Projects({ githubData }: ProjectProps) {
                 cardsOffsets.current[pos] = (cardWidth + 32) * pos;
             }
         }
-        console.log("sets of card offsets: ", cardsOffsets.current)
 
         setCarouselOffset(cardsOffsets.current[cardPos.current])
         setShowBtnIfMobile(isMobileDevice());
@@ -108,7 +107,6 @@ export default function Projects({ githubData }: ProjectProps) {
     }
 
     const projectCards = githubData.map((repo: Record<string, any>, id: number): JSX.Element => {
-        // console.log(projectImagesUrl[repo.name])
         return <ProjectCard key={id}
             title={repo.name}
             description={repo.description}
@@ -150,22 +148,17 @@ export default function Projects({ githubData }: ProjectProps) {
 
     const fixCarousel = (): void => {
         if (!carouselRef.current) return;
-        console.log("fix carousel")
         document.body.style.overflow = 'unset';
 
         isDragging.current = false;
 
-        console.log("cardPos:", cardPos.current)
-
         if (cardPos.current == 0) {
-            console.log("movimendo al penultimo")
             // go from first to second-last project
             carouselRef.current.classList.remove("carousel-anim");
             cardPos.current = githubData.length;
             dotPos.current = githubData.length - numCardsOnScreen.current;
             setCarouselOffset(cardsOffsets.current[cardPos.current])
         } else if (cardPos.current == cardsOffsets.current.length - numCardsOnScreen.current) {
-            console.log("movimendu al secondo")
             // go from last to second project
             carouselRef.current.classList.remove("carousel-anim");
             cardPos.current = numCardsOnScreen.current;
@@ -176,11 +169,7 @@ export default function Projects({ githubData }: ProjectProps) {
 
     const handlePointerDown = (e: React.PointerEvent<HTMLElement>) => {
         if (!projectCarouselRef.current || !carouselRef.current || isDragging.current) return;
-        // console.log((e.target as Element).tagName)
 
-        console.log("pointer down");
-
-        console.log("cardPos:", cardPos.current)
         isDragging.current = true;
 
         if ((e.target as Element).tagName !== 'A') {
@@ -192,7 +181,6 @@ export default function Projects({ githubData }: ProjectProps) {
 
         startX.current = e.pageX - carouselRef.current.offsetLeft;
         currentPos.current = carouselOffset;
-        console.log(startX.current)
     }
     const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
         if (!isDragging.current || !carouselRef.current) return;
@@ -209,52 +197,34 @@ export default function Projects({ githubData }: ProjectProps) {
         if (newOffset >= 0 && newOffset <= cardsOffsets.current[cardsOffsets.current.length - numCardsOnScreen.current]) {
 
             setCarouselOffset(newOffset);
-            console.log("cardPos:", cardPos.current);
-            // console.log("prev offset: ", (cardsOffsets.current[cardPos.current - 1] + cardWidth.current))
-            // console.log("next offs: ", (cardsOffsets.current[cardPos.current + 1] - cardWidth.current))
-            console.log(newOffset)
             if (cardPos.current >= 0 && newOffset <= (cardsOffsets.current[cardPos.current - 1])) {
-                console.log("raggiunto prev card offset");
                 cardPos.current = cardPos.current - 1;
                 dotPos.current = dotPos.current - 1;
             } else if (cardPos.current < githubData.length && newOffset >= (cardsOffsets.current[cardPos.current + 1])) {
-                console.log("raggiunto next card offset");
                 cardPos.current = cardPos.current + 1;
                 dotPos.current = dotPos.current + 1;
             }
         } else {
-            console.log("min or max reached")
             return;
         }
-        console.log("------------------------------------")
     }
     const handlePointerUp = () => {
         if (!carouselRef.current || !cardWidth) return;
-        console.log("pointer up");
         isDragging.current = false;
 
         if (isMobileDevice()) hasStoppedScrollY.current = false;
 
         carouselRef.current.classList.add("carousel-anim");
-        console.log("cardPos:", cardPos.current)
-        console.log("offset:", carouselOffset)
-        // console.log("prev trigger:", (cardsOffsets.current[cardPos.current - 1] + cardWidth.current))
-        // console.log("next trigger:", (cardsOffsets.current[cardPos.current + 1] - cardWidth.current))
         if (carouselOffset === 0 || carouselOffset === cardsOffsets.current[cardsOffsets.current.length - numCardsOnScreen.current]) {
-            console.log("fix senza anim")
             fixCarousel();
         } else if (carouselOffset <= (cardsOffsets.current[cardPos.current - 1] + cardWidth)) {
-            console.log("raggiunto prev trigger")
             setCarouselOffset(cardsOffsets.current[cardPos.current - 1]);
             cardPos.current--;
             dotPos.current = dotPos.current === 0 ? githubData.length-1 : dotPos.current-1;
         } else if (carouselOffset >= (cardsOffsets.current[cardPos.current + 1] - cardWidth)) {
-            console.log("raggiunto next trigger")
             setCarouselOffset(cardsOffsets.current[cardPos.current + 1]);
             cardPos.current++;
             dotPos.current = dotPos.current === githubData.length-1 ? 0 : dotPos.current+1;
-            console.log("gitlen: ", githubData.length-1)
-            console.log("dotPos: ", dotPos.current)
         } else {
             setCarouselOffset(cardsOffsets.current[cardPos.current]);
         }

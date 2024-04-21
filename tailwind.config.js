@@ -9,7 +9,6 @@ const firstAnimDuration = 1;
 const firstAnimDelay = surnameAnimDuration + nameAnimDuration - nameAnimDelay + .2;
 
 const greaterAnim = .1;
-const greaterAnimDelay = firstAnimDelay - .2;
 
 const secondAnimDuration = .8;
 const secondAnimDelay = firstAnimDelay + firstAnimDuration;

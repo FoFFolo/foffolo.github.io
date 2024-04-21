@@ -15,7 +15,6 @@
 
   .projectcard {
     @apply relative bg-projectcard rounded-lg shadow-projectcard_sh
-           /* w-100vh-mx3-m2 sm:w-100vh-mx5-m2 md:w-100vh-mx7-m2 lg:w-100vh-mx8-m2 */
            py-4 px-2
            grid gap-4
   }

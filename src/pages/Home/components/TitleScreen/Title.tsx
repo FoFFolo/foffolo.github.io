@@ -15,8 +15,6 @@ export default function Title() {
 
     const TypingText = ({ animation, children }: { animation: string, children: string }) => {
         return (
-            // <span className={`opacity-0 text-start ${animation} font-semibold`}>{children}</span>
-            // <span className={`w-0 text-start border-r-[.1em] overflow-hidden whitespace-nowrap my-0 mx-auto ${animation}`}>{children}</span>
             <p className={`w-0 text-start border-r-[.1em] border-transparent overflow-hidden whitespace-nowrap my-0 ${animation}`}>{children}</p>
         )
     }

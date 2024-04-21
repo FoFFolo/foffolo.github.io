@@ -6,13 +6,8 @@ import ProjectFetch from "./components/Projects/ProjectFetch";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
-// import { useEffect } from "react";
 
 export default function Home() {
-    // useEffect(() => {
-    //     console.log(window.scrollY)
-    // }, []);
-
     return (
         <>
             <TitleScreen />
