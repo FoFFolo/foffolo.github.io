@@ -40,6 +40,12 @@
   box-sizing: border-box;
 }
 
+.titlescreen-bg {
+  background-image: url('./title_bg.png');
+  background-repeat: repeat;
+  background-size: 30em;
+}
+
 html {
   scroll-behavior: smooth;
 }

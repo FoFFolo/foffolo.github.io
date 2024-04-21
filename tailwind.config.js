@@ -5,7 +5,6 @@ const nameAnimDuration = .8;
 const nameAnimDelay = surnameAnimDuration - .4;
 
 const firstAnimDuration = 1;
-// const firstAnimDelay = greaterAnimDelay + .4;
 const firstAnimDelay = surnameAnimDuration + nameAnimDuration - nameAnimDelay + .2;
 
 const greaterAnim = .1;

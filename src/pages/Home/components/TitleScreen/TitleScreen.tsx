@@ -33,7 +33,7 @@ export default function TitleScreen() {
     }
 
     return (
-        <div className="h-svh bg-titlescreen-bg bg-[length:30em] bg-repeat
+        <div className="h-svh titlescreen-bg
                         flex flex-col justify-between">
             <TopTitle />
 
