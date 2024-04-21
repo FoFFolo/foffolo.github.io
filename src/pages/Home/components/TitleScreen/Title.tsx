@@ -24,7 +24,6 @@ export default function Title() {
             <div className="flex flex-col justify-center items-center text-center">
                 <div className="text-fn_clamp font-righteous 
                                         tracking-[.20rem] not-italic text-blue-950">
-                    {/* <h1 className="border-r-[.1em] overflow-hidden whitespace-nowrap my-0 mx-auto animate-surname_anim">Serratore</h1> */}
                     <TextAppears animation="animate-surname-anim">Serratore</TextAppears>
                     <TextAppears animation="animate-name-anim">Federico</TextAppears>
                 </div>
@@ -33,7 +32,6 @@ export default function Title() {
                         <TextAppears animation="animate-greater-anim">&gt; </TextAppears>
                         <TypingText animation="animate-first-anim">Developer for</TypingText>
                     </div>
-                    {/* <TypingText animation="w-full">everything</TypingText> */}
                     <div className="absolute">
                         <TypingText animation="animate-second-anim ml-5">everything</TypingText>
                     </div>
