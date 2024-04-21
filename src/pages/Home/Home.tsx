@@ -17,7 +17,7 @@ export default function Home() {
         <>
             <TitleScreen />
             
-            <div className="mx-3 sm:mx-5 md:mx-7 lg:mx-8">
+            <div className="px-3 sm:px-5 md:px-7 lg:px-8">
             {/* <div className="[margin-inline:_clamp(.8em,4vw,2em)]"> */}
                 <Section title="About me">
                     <AboutMe />
