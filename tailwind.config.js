@@ -1,12 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 const surnameAnimDuration = .8;
-const nameAnimDuration = .8;
-const descriptionDelay = surnameAnimDuration + nameAnimDuration
 
-const firstAnimDuration = .7;
-const secondAnimDelay = descriptionDelay + firstAnimDuration + .2;
-const thirdAnimDelay = secondAnimDelay + .2;
-const thirdAnimDuration = .3;
+const nameAnimDuration = .8;
+const nameAnimDelay = surnameAnimDuration - .4;
+
+const firstAnimDuration = 1;
+// const firstAnimDelay = greaterAnimDelay + .4;
+const firstAnimDelay = surnameAnimDuration + nameAnimDuration - nameAnimDelay + .2;
+
+const greaterAnim = .1;
+const greaterAnimDelay = firstAnimDelay - .2;
+
+const secondAnimDuration = .8;
+const secondAnimDelay = firstAnimDelay + firstAnimDuration;
 
 export default {
   content: [
@@ -67,13 +73,20 @@ export default {
       animation: {
         typing: `typing ${surnameAnimDuration}s steps(9, end) forwards`,
         blink_caret: `blink_caret ${nameAnimDuration}s step-end forwards`,
-        surname_anim: `typing ${surnameAnimDuration}s steps(9, end) forwards, 
-                      blink_caret ${nameAnimDuration}s step-end forwards`,
-        name_anim: `typing ${nameAnimDuration}s steps(8, end) ${nameAnimDuration}s forwards, 
-                    blink_caret ${nameAnimDuration}s step-end ${nameAnimDuration}s forwards`,
-        first_anim: `textAppears ${firstAnimDuration}s ${descriptionDelay}s forwards`,
-        second_anim: `textAppears ${firstAnimDuration}s ${secondAnimDelay}s forwards`,
-        third_anim: `textAppears ${thirdAnimDuration}s ${thirdAnimDelay}s forwards`,
+        'surname-anim': `textAppears ${surnameAnimDuration}s forwards`,
+        'name-anim': `textAppears ${nameAnimDuration}s ${nameAnimDelay}s forwards`,
+        // name_anim: `typing ${nameAnimDuration}s steps(8, end) ${nameAnimDuration}s forwards, 
+        //             blink_caret ${nameAnimDuration}s step-end ${nameAnimDuration}s forwards`,
+        // name_anim: `typing ${nameAnimDuration}s steps(8, end) ${nameAnimDuration}s forwards, 
+        //             blink_caret ${nameAnimDuration}s step-end ${nameAnimDuration}s forwards`,
+        // first_anim: `textAppears ${firstAnimDuration}s ${descriptionDelay}s forwards`,
+        'greater-anim': `textAppears ${greaterAnim}s ${firstAnimDelay}s forwards`,
+        'first-anim': `typing ${firstAnimDuration}s steps(13, end) ${firstAnimDelay}s forwards,
+                       blink_caret ${firstAnimDuration}s step-end ${firstAnimDelay}s forwards`,
+        'second-anim': `typing ${secondAnimDuration}s steps(10, end) ${secondAnimDelay}s forwards,
+                       blink_caret ${secondAnimDuration}s step-end ${secondAnimDelay}s forwards`,
+        // second_anim: `textAppears ${firstAnimDuration}s ${secondAnimDelay}s forwards`,
+        // third_anim: `textAppears ${thirdAnimDuration}s ${thirdAnimDelay}s forwards`,
         btn_appears: 'btnAppears .2s forwards',
         btn_disappears: 'btnDisappears .2s forwards',
       },

@@ -28,6 +28,6 @@ export default function ProjectFetch() {
     }, []);
 
     return (
-        !isLoading && <Projects githubData={githubData}/>
+        !isLoading ? <Projects githubData={githubData}/> : null
     )
 }
