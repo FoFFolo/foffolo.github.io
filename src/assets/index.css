@@ -3,24 +3,20 @@
 @tailwind utilities;
 
 @layer components {
-
   .abilitycard {
     @apply relative rounded-tl-sm rounded-tr-sm 
            rounded-br-full rounded-bl-full bg-ability-card 
            p-4 flex flex-col items-center gap-4 
            border border-solid border-black shadow-abilitycard_sh 
            transition-transform ease-in-out duration-150;
-    ;
   }
 
   .projectcard {
     @apply relative bg-projectcard rounded-lg shadow-projectcard_sh
            py-4 px-2
-           grid gap-4
+           grid gap-4;
   }
-
 }
-
 
 :root {
   font-family: "Roboto", sans-serif;
@@ -34,6 +30,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+  body::after{
+    position: absolute; 
+    width:0; 
+    height:0; 
+    overflow:hidden; 
+    z-index:-1;
+    content: url('./title_bg.png');
+  }
 
 *,
 *:before,
