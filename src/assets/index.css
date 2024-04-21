@@ -9,7 +9,7 @@
            rounded-br-full rounded-bl-full bg-ability-card 
            p-4 flex flex-col items-center gap-4 
            border border-solid border-black shadow-abilitycard_sh 
-           hover:scale-110 transition-transform ease-in-out duration-150;
+           transition-transform ease-in-out duration-150;
     ;
   }
 

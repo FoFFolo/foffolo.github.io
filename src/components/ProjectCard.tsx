@@ -1,3 +1,5 @@
+import arrowRightLong from '../assets/arrow-right-long-solid.svg';
+
 type ProjectCardProps = {
     title: string;
     description: string;
@@ -21,11 +23,15 @@ export default function ProjectCard({ title, description, link, cardWidth }: Pro
                     </div>
                 </div>
                 <a className="self-center text-black text-center
-                             py-2 px-7 rounded-md select-none text-xl
+                             py-2 px-7 rounded-full select-none text-xl
                              border border-solid border-transparent
                              transition-colors ease duration-300
-                             bg-yellow-300 hover:bg-yellow-400"
-                    href={link}>Visit</a>
+                             bg-yellow-300 hover:bg-yellow-400
+                             flex justify-center items-center gap-2"
+                    href={link}>
+                        <p>Visit</p>
+                        <img className='w-6' src={arrowRightLong} />
+                </a>
             </div>
         </div>
     )
